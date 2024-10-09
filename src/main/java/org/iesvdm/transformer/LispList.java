@@ -1,7 +1,7 @@
 package org.iesvdm.transformer;
 
-public class LispList<E>
-{
+public class LispList<E> {
+
     private Cell<E> myList;
 
     private LispList(Cell<E> list)
@@ -34,8 +34,7 @@ public class LispList<E>
         return new LispList<T>(null);
     }
 
-    public boolean equals(Object other)
-    {
+    public boolean equals(Object other) {
         LispList<E> otherList = (LispList<E>) other;
         if(this.isEmpty())
             return otherList.isEmpty();
@@ -44,24 +43,21 @@ public class LispList<E>
                     this.tail().equals(otherList.tail());
     }
 
-    public String toString()
-    {
+    public String toString() {
         if(isEmpty())
             return "[]";
         else
             return "["+head()+restToString(tail());
     }
 
-    private static <T> String restToString(LispList<T> l)
-    {
+    private static <T> String restToString(LispList<T> l) {
         if(l.isEmpty())
             return "]";
         else
             return ","+l.head()+restToString(l.tail());
     }
 
-    private static class Cell <T>
-    {
+    private static class Cell <T> {
         T first;
         Cell<T> rest;
 
