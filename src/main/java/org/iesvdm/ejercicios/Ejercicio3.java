@@ -6,56 +6,55 @@ public class Ejercicio3 {
 
         /**
          *
-         *Three lists of type LispList<Integer> are declared:
+         * Tres listas de tipo LispList<Integer> son declaradas:
          *
-         * LispList<integer> ls1, ls2, ls3;</integer>
+         * LispList<Integer> ls1, ls2, ls3;
          *
-         * The  user  enter two lists of integers
+         * El usuario ingresa dos listas de enteros
          *
-         * System.out.print("nter a list (of integers): ");
+         * System.out.print("Ingrese una lista (de enteros): ");
          * String str = in.nextLine();
          * ls1 = parseIntLispList(str);
-         * System.out.print("nter another list (of integers): ");
+         * System.out.print("Ingrese otra lista (de enteros): ");
          * str = in.nextLine();
          * ls2 = parseIntLispList(str);
          *
-         * The entered lists are converted into LispList<Integer> objects using the parseIntLispList method.
+         * Las listas ingresadas se convierten en objetos LispList<Integer> usando el método parseIntLispList.
          *
-         * Then  Joiner<Integer> object named adder is created and initialized with an instance of JoinByAdding:
+         * Luego, un objeto Joiner<Integer> llamado adder es creado e inicializado con una instancia de JoinByAdding:
          *
-         * Joiner<integer> adder = new JoinByAdding();
+         * Joiner<Integer> adder = new JoinByAdding();
          *
-         * The two lists are combined using the zipLists method of the Joiners class,
-         * which takes the Joiner and the two lists as arguments:
+         * Las dos listas se combinan usando el método zipLists de la clase Joiners,
+         * que toma el Joiner y las dos listas como argumentos:
          *
          * ls3 = Joiners.zipLists(adder, ls1, ls2);
          *
-         * Finally, the result of the combination is printed to the console
+         * Finalmente, el resultado de la combinación se imprime en la consola
          *
-         * System.out.println("Adding corresponding integers in the lists gives:\n" + ls3);
+         * System.out.println("Sumar los enteros correspondientes en las listas da:\n" + ls3);
          *
-
-            The parseIntLispList method converts a string representing a list of integers into a LispList<Integer> object.
-            First, it trims the string and removes the brackets
+         * El método parseIntLispList convierte una cadena que representa una lista de enteros en un objeto LispList<Integer>.
+         * Primero, recorta la cadena y elimina los corchetes
          * String line = str.trim();
          * String contents = line.substring(1, line.length() - 1).trim();
          *
-         * If the list is empty, it returns an empty list
+         * Si la lista está vacía, retorna una lista vacía
          *
          * if (contents.length() == 0) {
          * return LispList.empty();
          * }
          *
-         * Otherwise, it splits the string into individual elements, converts them to integers, and adds them to the list:
+         * De lo contrario, divide la cadena en elementos individuales, los convierte en enteros y los agrega a la lista:
          *
          * String[] nums = contents.split(",");
-         * LispList<integer> list = LispList.empty();</integer>
+         * LispList<Integer> list = LispList.empty();
          * for (int i = nums.length - 1; i >= 0; i--) {
          * String num = nums[i].trim();
          * list = list.cons(Integer.parseInt(num));
          * }
          *
-         * Finally, it returns the constructed list:
+         * Finalmente, retorna la lista construida:
          *
          * return list;
          *

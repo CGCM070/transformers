@@ -4,10 +4,11 @@ public class LispList<E> {
 
     private Cell<E> myList;
 
-    private LispList(Cell<E> list)
+    public LispList(Cell<E> list)
     {
         myList=list;
     }
+
 
     public boolean isEmpty()
     {
