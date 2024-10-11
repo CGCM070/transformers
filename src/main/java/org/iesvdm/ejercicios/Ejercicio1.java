@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class Ejercicio1 {
     public static void main(String[] args) {
         /**
-         * Exercise N1
-         * Modify the class Transformers so that it contains a static method applyConst
-         * which takes a Transformer object and an ArrayList object as arguments and returns a new
+         * Ejercicio N1
+         * Modifica la clase Transformers para que contenga un método estático applyConst
+         * que tome un objeto Transformer y un objeto ArrayList como argumentos y devuelva un nuevo
          */
 
         Scanner input = new Scanner(System.in);

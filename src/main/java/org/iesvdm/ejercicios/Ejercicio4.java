@@ -9,11 +9,22 @@ import java.util.Arrays;
 
 public class Ejercicio4 {
 
-    /***
-     * Write a static method zipArrayLists to go in class Joiners which takes
-     * two ArrayLists and produces a third one joining their contents according to a Joiner argument,
-     * similar to the way zipLists works. Write some code to demonstrate it working.
+    /**
+     * Escribe un método estático zipArrayLists para la clase Joiners que tome
+     * dos ArrayLists y produzca un tercero uniendo sus contenidos según un argumento Joiner,
+     * similar a la forma en que funciona zipLists. Escribe un código para demostrar su funcionamiento.
      */
+
+    /**
+     * Combina dos ArrayLists usando un Joiner.
+     * <p>
+     * 1. Declaramos un método estático y genérico.
+     * 2. Inicializamos el ArrayList de resultados.
+     * 3. Determinamos el tamaño de la lista más pequeña.
+     * 4. Iteramos y combinamos elementos usando el Joiner.
+     * 5. Retornamos el resultado combinado.
+     */
+
     public class Joiners {
         public static <T> ArrayList<T> zipArrayLists(Joiner<T> joiner, ArrayList<T> list1, ArrayList<T> list2) {
             ArrayList<T> result = new ArrayList<>();

@@ -29,10 +29,13 @@ public class Ejercicio2 {
         System.out.println("Multiplying the contents by 10 gives: " + a);
 
         /**
-         *         public static <T> void applyDest(Transformer<T> tran, ArrayList<T> a) {
-         *             for (int i = 0; i < a.size(); i++)
-         *             a.set(i, tran.transform(a.get(i)));
-         *         }
+         * Método estático applyDest en la clase Transformers que funciona de manera destructiva.
+         * Modifica el ArrayList a en su lugar, aplicando la transformación a cada elemento.
+         *
+         * public static <T> void applyDest(Transformer<T> tran, ArrayList<T> a) {
+         *     for (int i = 0; i < a.size(); i++)
+         *         a.set(i, tran.transform(a.get(i)));
+         * }
          */
     }
 

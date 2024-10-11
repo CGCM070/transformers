@@ -16,33 +16,29 @@ public class Transformers {
         return b;
     }
 
+
+
     /**
      * Exercise N2
+     *
+     * El método estático applyConst en la clase Transformers funciona de manera constructiva. Agrega un método estático
+     * applyDest a la clase Transformers que funcione de manera similar a applyConst pero de manera destructiva en lugar de constructiva
+     * (es decir, que cambie su argumento ArrayList en lugar de construir y devolver uno nuevo).
      */
 
     /**
-     * The static method applyConst in the class Transformers works constructively. Add a static
-     * method applyDest to the class Transformers which works similarly to applyConst but
-     * destructively rather than constructively (that is, it changes its ArrayList argument rather than
-     * constructing and returning a new one).
+     * Modificamos el ArrayList a en su lugar, aplicando la transformación a cada elemento.
      */
 
-    /**
-     * We modify the ArrayList a in place, applying the transformation to each element.
-     */
     public static <T> void applyDest(Transformer<T> tran, ArrayList<T> a) {
         for (int i = 0; i < a.size(); i++)
             a.set(i, tran.transform(a.get(i)));
     }
 
 
-
-
-
-
-
-
-
+    /***
+     * Exercise N3 -> La explicación de este ejercicio se encuentra en la clase Ejercicio3.java
+     */
 
 }
 
