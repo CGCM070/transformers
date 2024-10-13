@@ -25,8 +25,7 @@ public class LispList<E> {
         return new LispList<E>(myList.rest);
     }
 
-    public LispList<E> cons(E item)
-    {
+    public LispList<E> cons(E item) {
         return new LispList<E>(new Cell<E>(item,myList));
     }
 
@@ -58,11 +57,11 @@ public class LispList<E> {
             return ","+l.head()+restToString(l.tail());
     }
 
-    private static class Cell <T> {
+    public static class Cell <T> {
         T first;
         Cell<T> rest;
 
-        Cell(T h,Cell<T> t)
+        public Cell(T h, Cell<T> t)
         {
             first=h;
             rest=t;

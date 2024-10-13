@@ -25,7 +25,7 @@ public class Ejercicio2 {
         System.out.println("The numbers are stored in an ArrayList: " + a);
 
         Transformer<Integer> trans = new TenTimes();
-        Transformers.applyDest(trans, a);
+        Transformers.applyDest(trans, a);    // <--- llamando al metodo hecho
         System.out.println("Multiplying the contents by 10 gives: " + a);
 
         /**
