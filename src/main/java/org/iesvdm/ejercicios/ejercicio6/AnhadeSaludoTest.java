@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class C6AnhadeSaludoTest {
+public class AnhadeSaludoTest {
 
     /**
      * La clase N6AnhadeSaludo implementa la interfaz Transformer.
