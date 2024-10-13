@@ -27,4 +27,26 @@ public class Joiners {
         return result;
     }
 
+
+    /**
+     * Ejercicio N8
+     * fold toma una lista de elementos y los combina en un solo elemento
+     *
+     * @param joiner
+     * @param list
+     * @param <T>    * @return
+     */
+
+    public static <T> T fold(Joiner<T> joiner, ArrayList<T> list) {
+        if (!list.isEmpty()) {
+            T result = list.get(0);
+            for (int i = 1; i < list.size(); i++) {
+                result = joiner.join(result, list.get(i));
+            }
+            return result;
+        }
+        System.out.println("La lista esta vacia");
+        return null;
+    }
+
 }

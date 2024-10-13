@@ -21,7 +21,6 @@ public class Main {
         CheckUtils.check(new ParCheck(), listaEnteros);
         CheckUtils.check(new LongCheck(10), listaStrings);
 
-
         System.out.println(listaEnteros);
         System.out.println(listaStrings);
 
